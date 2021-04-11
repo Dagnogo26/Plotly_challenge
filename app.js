@@ -55,7 +55,7 @@ function buildPlot(index){
         
       }]
       Plotly.newPlot("bar", trace1); 
-      
+      demo_info.html('')
       for (var i = 0; i< key.length; i++) {
         var li2 = demo_info.append("p").text(`${key[i]}: ${obj_values[i]}`);  
         console.log(li2)
