@@ -7,7 +7,7 @@ function handleSubmit() {
   // Select the input value from the form
   var dropdownmenu = d3.select("#selDataset");
   var test_id= dropdownmenu.property('value')
-  d3.json("samples.json").then((data) => {
+  d3.json("data/samples.json").then((data) => {
     for (var i=0; i <data.names.length; i++){
       if(test_id === data.names[i]){
          buildPlot(i)
@@ -23,7 +23,7 @@ function handleSubmit() {
 
 //create a buildplot function to retrive data and plot all graphs
 function buildPlot(index){
-  d3.json("samples.json").then((data) => {
+  d3.json("data/samples.json").then((data) => {
 
     console.log(data);
     id_values= data.names
